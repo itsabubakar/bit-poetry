@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <div class="logo">
+                <span class="logotext">Bit Poetry</span>
+            </div>
+        
+            <div class="landing-text">
+                <h1>Hi!</h1>
+                <button class="button">Click me</button>
+            </div>
+        
+            <div class="landing-paragraph">
+                <p>
+                    <blockquote class="text">
+                    We sing, but oh the clay is vile <br>
+                    Beneath our feeth, and long the mile;<br>
+                    But let the world dream otherwise.<br>
+                    <span class="poem-info">&mdash; Excerpt from <cite>We Wear the Mask</cite> by Paul Lawrence Dunbar.</span>  
+                    </blockquote>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+
+     const btn = document.querySelector(".button");
+     const text = document.querySelector(".text");
+     const poemInfo = document.querySelector(".poemInfo");
+
+     const poems = [
+          `<blockquote class="text">
+                    We sing, but oh the clay is vile 1<br>
+                    Beneath our feeth, and long the mile!;<br>
+                    But let the world dream otherwise.<br>
+                    <span class="poem-info">&mdash; Excerpt from <cite>We Wear the Mask</cite> by Paul Lawrence Dunbar.</span>  
+                    </blockquote>`,
+
+                    `<blockquote class="text">
+                   My candle burns at both ends;<br>
+                    It will not last the night.<br>
+                    But ah, my foes, and oh, my friends-<br>
+                    It gives a lovely light<br>
+                    <span class="poem-info">&mdash;<cite>First Fig</cite> by Edna St. Vincent Millay.</span>  
+                    </blockquote>`,
+
+                    `<blockquote class="text">
+                    Life is short, though I keep this from my children.<br>
+                    Life is short, and I've shortened mine in a thousand delicious, ill-adviced ways,<br>
+                    a thousand deliciously ill-advised ways I'll keep from my children<br>
+                    <span class="poem-info">&mdash; Excerpt from <cite>Good Bones</cite> by Maggie Smith</span>  
+                    </blockquote>`,
+
+                    `<blockquote class="text">
+                    Stay with me,<br>
+                    Make room for me.<br>
+                    So I can listen to your stories and tell you mine,<br>
+                    And I can see you laugh and show you my joy<br>
+                    <span class="poem-info">&mdash; Excerpt from <cite>Stay</cite> by Sadiq Bilyamin.</span>  
+                    </blockquote>`,
+
+                    `<blockquote class="text">
+                    Do not stand at my grave and weep<br>
+                    I am not there. I do not sleep.<br>
+                    I am a thousand winds that blow.<br>
+                    I am the diamond glints on snow.<br>
+                    <span class="poem-info">&mdash; Excerpt from <cite>We Wear the Mask</cite> by Paul Lawrence Dunbar.</span>  
+                    </blockquote>`
+     ]
+
+     
+
+     btn.addEventListener("click", function(){
+
+        let random = poems[getRandomPoem()];
+         text.innerHTML = random;
+
+     })
+
+     function getRandomPoem() {
+      return Math.floor(Math.random() * poems.length);
+}   
+
+     
+
+     //figure out how to loop over the array randomly and get poems from there. and switch the poem out. Look up hex.js. Learning those 15 basic project was not a waste. Do it again
+
+
+</script>
+</body>
+</html>
